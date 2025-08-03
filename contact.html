@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | STEPLICHN Construction Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="home.html" class="logo">
+                    <span class="logo-icon"><i class="fas fa-building"></i></span>
+                    <span class="logo-text">STEPLICHN<span>Construction Company</span></span>
+                </a>
+
+                <div class="nav-links">
+                    <div class="menu-toggle-container">
+                       <button class="menu-toggle">☰</button>
+                    </div>
+                    <ul class="nav-menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="tel:+2349066657571">Call Me</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>I'm ready to discuss your next construction project</p>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Contact Information</h2>
+                    <p>Have questions about my services or want to start a project? Reach out through any of these channels:</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>My Location</h3>
+                                <p>Mount Carmel Federal Housing, Umuguma, Owerri, Imo State</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone Number</h3>
+                                <p><a href="tel:+2349066657571">+234 906 665 7571</a></p>
+                                <p>Mon-Fri: 8am - 5pm</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Address</h3>
+                                <p><a href="mailto:Nwaosulivinus85@gmail.com">Nwaosulivinus85@gmail.com</a></p>
+                                <p>Response within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Follow me</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-section">
+                    <h2 class="section-title">Send me a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">My Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d6.984509414768757!3d5.402037796081962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10425d5e7c1e3c0f%3A0x1a3b1b1b1b1b1b1b!2sMount%20Carmel%20Federal%20Housing%20Estate%2C%20Owerri!5e0!3m2!1sen!2sng!4v1620000000000!5m2!1sen!2sng" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact me today for a free consultation and quote</p>
+                <div class="cta-buttons">
+                    <a href="tel:+2349066657571" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="mailto:Nwaosulivinus85@gmail.com" class="btn btn-light">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="home.html" class="logo footer-logo">
+                        <span class="logo-icon"><i class="fas fa-building"></i></span>
+                        <span class="logo-text">STEPLICHN<span>Construction Company</span></span>
+                    </a>
+                    <p>Building excellence in Nigeria since 2012. Quality construction services for residential and commercial projects.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#residential">Residential Construction</a></li>
+                        <li><a href="services.html#commercial">Commercial Buildings</a></li>
+                        <li><a href="services.html#renovation">Renovation</a></li>
+                        <li><a href="services.html#consultation">Construction Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Me</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Mount Carmel, Umuguma, Owerri, Imo State</li>
+                        <li><i class="fas fa-phone"></i> +234 906 665 7571</li>
+                        <li><i class="fas fa-envelope"></i> Nwaosulivinus85@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 STEPLICHN Construction. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
