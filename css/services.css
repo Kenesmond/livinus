@@ -169,24 +169,49 @@ img {
     color: blue;
     font-family: 'Roboto', sans-serif;
 }
+.menu-container{
+    display: none;
+}
+.menu-container.menu-toggle {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.menu-container.menu-toggle:hover {
+    background: #fff;
+    color: #2c3e50;
+    transform: scale(1.05);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 /* .navbar ul {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 3px;
     position: relative;
-    margin: 0;
-    padding: 0;
     list-style: none;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
-    top: 0;
+    top: 100%;
     left: 0;
-    padding: 10px 20px;
+    padding: 10px;
     background-color: #000;
 } */
 .navbar ul li {
     list-style: none;
+   
 }
 .navbar ul li a {
     color:blue;
@@ -212,16 +237,21 @@ img {
 .navbar ul li a:hover::after {
     width: 100%;
 }
+.navbar ul li a.active::after {
+    width: 50%;
+}
 
 .nav-links {
     display: flex;
     align-items: center;
+    
 }
 .nav-links li a{
   gap: 10px;
   color: blue;
   
 }
+
 .nav-menu {
     display: flex;
 }
@@ -233,7 +263,6 @@ img {
 .nav-menu a {
     font-weight: 600;
     position: relative;
-    font-family: 'Poppins', sans-serif;
 }
 
 .nav-menu a:hover {
@@ -258,6 +287,7 @@ img {
 .menu-toggle-container {
     display: none;
 }
+
 
 .menu-toggle {
     background: none;
@@ -753,19 +783,20 @@ img {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    .menu-toggle-container.menu-toggle{
+        display: block;
+    }
     .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background: var(--white);
-        width: 100%;
-        height: calc(100vh - 80px);
+        display: none;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-        z-index: 1000;
-        box-shadow: var(--box-shadow);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        padding: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        gap: 0;
     }
 
     .nav-menu.active {

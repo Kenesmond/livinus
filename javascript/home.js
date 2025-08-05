@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
+    const navbar = document.querySelectorAll('.navbar');
+    const navLinks = document.querySelectorAll('.nav-menu a');
     
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function() {
@@ -16,16 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking on a nav link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuToggle.innerHTML = '☰';
-            }
+    // Mobile menu toggle - Fixed class names
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle active class for mobile menu
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Add animation class
+            menuToggle.style.transform = navMenu.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
         });
-    });
+    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

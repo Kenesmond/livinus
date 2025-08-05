@@ -17,16 +17,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking on a nav link
-    const navMenuLinks = document.querySelectorAll('.nav-menu a');
-    navMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                menuToggle.innerHTML = '☰';
-            }
+    // Mobile menu toggle - Fixed class names
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle active class for mobile menu
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Add animation class
+            menuToggle.style.transform = navMenu.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
         });
-    });
+    }
 
     // Services Tab Functionality
     const tabButtons = document.querySelectorAll('.tab-btn');

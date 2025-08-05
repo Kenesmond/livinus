@@ -584,6 +584,7 @@ img {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    
     .nav-menu {
         position: fixed;
         top: 80px;

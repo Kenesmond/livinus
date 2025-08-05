@@ -28,15 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Mobile menu toggle - Fixed class names
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle active class for mobile menu
             navMenu.classList.toggle('active');
-            // Change the menu icon based on state
-            if (navMenu.classList.contains('active')) {
-                this.innerHTML = '✕'; // Close icon
-            } else {
-                this.innerHTML = '☰'; // Hamburger icon
-            }
+            menuToggle.classList.toggle('active');
+            
+            // Add animation class
+            menuToggle.style.transform = navMenu.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
         });
     }
 
