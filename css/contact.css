@@ -153,22 +153,7 @@ img {
     color: blue;
     font-family: 'Roboto', sans-serif;
 }
-/* .navbar ul {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 5px;
-    top: 0;
-    left: 0;
-    padding: 10px 20px;
-    background-color: #000;
-} */
+
 .navbar ul li {
     list-style: none;
 }
@@ -210,6 +195,8 @@ img {
 }
 .nav-menu {
     display: flex;
+    max-height:0px;
+    border: thin solid red;
 }
 
 .nav-menu li {
@@ -241,7 +228,7 @@ img {
     width: 100%;
 }
 
-.menu-toggle-container {
+.menu-container .menu-toggle{
     display: none;
 }
 
@@ -575,7 +562,9 @@ img {
     font-size: 0.9rem;
     color: var(--light-color);
 }
-
+.footer-bottom-links a{
+    color:blue;
+}
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
@@ -584,20 +573,23 @@ img {
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+    .menu-toggle-container.menu-toggle{
+        display: block;
+    }
     
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        background: var(--white);
-        width: 100%;
-        height: calc(100vh - 80px);
+    .nav-menu.active {
+        display: none;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-        z-index: 1000;
-        box-shadow: var(--box-shadow);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-width: 100% !important;
+        right: 0;
+        background: #2c3e50;
+        background-color: #000;
+        padding: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        gap: 0;
     }
 
     .nav-menu.active {
@@ -631,6 +623,46 @@ img {
 }
 
 @media (max-width: 768px) {
+     .menu-container .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        padding: 1rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        border: thin solid red;
+        height: 100% !important;
+    }
+    
+    .nav-menu li a {
+        display: block;
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 0.2rem 0;
+    }
+    
+    .navbar {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
     .contact-hero {
         padding: 150px 20px 80px;
     }

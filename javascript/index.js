@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('.nav-menu');
             // Change the menu icon based on state
-            if (navMenu.classList.contains('.active')) {
+            if (navMenu.classList.contains('.nav-menu')) {
                 this.innerHTML = '✕'; // Close icon
             } else {
                 this.innerHTML = '☰'; // Hamburger icon
@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             
             // Toggle active class for mobile menu
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('nav-menu');
+            menuToggle.classList.toggle('.nav-menu');
             
             // Add animation class
             menuToggle.style.transform = navMenu.classList.contains('active') ? 'rotate(90deg)' : 'rotate(0deg)';
