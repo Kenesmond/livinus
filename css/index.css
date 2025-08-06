@@ -141,10 +141,11 @@ img {
 .CEO h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 900;
 }
 
 .CEO h1 span {
-    
+    font-weight: 900;
     color: blue;
 }
 
@@ -155,12 +156,14 @@ img {
 
 .CEO h2 span {
     color: lawngreen;
+    font-weight: 900;
 }
 
 .CEO .description {
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto 30px;
+    font-weight: 900;
 }
 
 .CEO img {
